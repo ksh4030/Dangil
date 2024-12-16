@@ -1,0 +1,16 @@
+services:
+  spring:
+    container_name: spring_green
+    image: spring:latest
+    restart: always
+    env_file:
+      - /env/spring.env
+    expose:
+      - 8080
+    environment:
+      TZ: Asia/Seoul
+
+networks:
+  default:
+    name: today-net
+    external: true

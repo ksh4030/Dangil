@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: create
+  
+  datasource:
+    url: jdbc:mysql://mysql:3306/today?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: ${MYSQL_USER_PROD_ID}
+    password: ${MYSQL_USER_PROD_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+kafka:
+  server: ${KAFKA_PROD_SERVER_ADDRESS}
